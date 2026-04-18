@@ -30,7 +30,6 @@ const Navbar = () => {
           <li><a href="#about" onClick={() => setIsOpen(false)} style={{ fontSize: '0.95rem', fontWeight: '500' }}>About</a></li>
           <li><a href="#skills" onClick={() => setIsOpen(false)} style={{ fontSize: '0.95rem', fontWeight: '500' }}>Skills</a></li>
           <li><a href="#projects" onClick={() => setIsOpen(false)} style={{ fontSize: '0.95rem', fontWeight: '500' }}>Projects</a></li>
-          <li><a href="#experience" onClick={() => setIsOpen(false)} style={{ fontSize: '0.95rem', fontWeight: '500' }}>Experience</a></li>
           <li><a href="#contact" onClick={() => setIsOpen(false)} style={{ fontSize: '0.95rem', fontWeight: '500' }}>Contact</a></li>
           <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <a href="/resume.pdf" download="Harshvardhan_Golekar_Resume.pdf" onClick={() => setIsOpen(false)} className="outline-btn" style={{ 

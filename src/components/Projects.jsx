@@ -8,27 +8,21 @@ const Projects = () => {
       description: "Advanced AI-powered screening system that extracts skills, calculates professional scores (out of 100), and provides actionable HR insights from PDF resumes. Built for scalability.",
       tech: ["React", "Spring Boot", "MongoDB", "AI/NLP"],
       featured: true,
-      github: "#",
-      live: "#",
-      imgSrc: "/ai_resume.png"
+      github: "https://github.com/Harsh936132/resume-ats-project"
     },
     {
       title: "College Dashboard",
       description: "A comprehensive administrative interface for academic management, featuring real-time statistics, department tracking, and responsive student management flows.",
       tech: ["JavaScript", "HTML5", "CSS3", "Bootstrap"],
       featured: false,
-      github: "#",
-      live: "#",
-      imgSrc: "/college_dashboard.png"
+      github: "https://github.com/Harsh936132/college-dashboard"
     },
     {
       title: "Stellar Crowdfunding DApp",
       description: "Implemented a multi-wallet crowdfunding application on the Stellar Testnet using Soroban smart contracts. Handles real-time event tracking and blockchain constraints.",
       tech: ["React", "Soroban", "Stellar SDK", "Tailwind"],
       featured: false,
-      github: "#",
-      live: "#",
-      imgSrc: "/stellar_dapp.png"
+      github: "https://github.com/Harsh936132/stellar-dapp"
     }
   ];
 
@@ -84,21 +78,7 @@ const Projects = () => {
                   ))}
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <a href={project.live} className="primary-btn" style={{ 
-                    padding: '0.6rem 1.2rem', 
-                    borderRadius: '50px', 
-                    fontSize: '0.9rem',
-                    background: 'var(--text-primary)',
-                    color: 'var(--bg-primary)',
-                    fontWeight: '600',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    transition: 'var(--transition-smooth)'
-                  }}>
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
-                  <a href={project.github} className="outline-btn" style={{ 
+                  <a href={project.github} target="_blank" rel="noreferrer" className="outline-btn" style={{ 
                     padding: '0.6rem 1.2rem', 
                     borderRadius: '50px', 
                     fontSize: '0.9rem',
@@ -109,7 +89,7 @@ const Projects = () => {
                     gap: '0.5rem',
                     transition: 'var(--transition-smooth)'
                   }}>
-                    <FaGithub size={18} /> GitHub
+                    <FaGithub size={18} /> Source Code
                   </a>
                 </div>
               </div>
