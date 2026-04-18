@@ -196,3 +196,30 @@ ul {
   .hamburger.active span:nth-child(2) { opacity: 0; }
   .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 }
+
+/* --- Added UI/UX CSS --- */
+html {
+  scroll-behavior: smooth;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px -5px rgba(0, 245, 255, 0.6);
+}
+
+.outline-btn:hover {
+  background: rgba(0, 245, 255, 0.05);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -10px rgba(0, 245, 255, 0.2);
+}
+
+.tech-badge {
+  transition: var(--transition-smooth);
+}
+
+.tech-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}

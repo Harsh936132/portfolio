@@ -1,22 +1,39 @@
 import React from 'react';
+import { SiJava, SiJavascript, SiMysql, SiSpringboot, SiReact, SiHibernate, SiMongodb, SiGithub, SiApachemaven, SiVisualstudiocode, SiEclipseide } from 'react-icons/si';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming",
-      skills: ["Java", "JavaScript", "SQL"]
+      skills: [
+        { name: "Java", icon: <SiJava color="#007396" /> }, 
+        { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> }, 
+        { name: "SQL", icon: <SiMysql color="#4479A1" /> }
+      ]
     },
     {
       title: "Frameworks",
-      skills: ["Spring Boot", "React", "Hibernate", "REST APIs"]
+      skills: [
+        { name: "Spring Boot", icon: <SiSpringboot color="#6DB33F" /> }, 
+        { name: "React", icon: <SiReact color="#61DAFB" /> }, 
+        { name: "Hibernate", icon: <SiHibernate color="#59666C" /> }
+      ]
     },
     {
       title: "Databases",
-      skills: ["MySQL", "MongoDB"]
+      skills: [
+        { name: "MySQL", icon: <SiMysql color="#4479A1" /> }, 
+        { name: "MongoDB", icon: <SiMongodb color="#47A248" /> }
+      ]
     },
     {
       title: "Tools",
-      skills: ["Git/GitHub", "Maven", "VS Code", "Eclipse"]
+      skills: [
+        { name: "Git/GitHub", icon: <SiGithub color="#FFF" /> }, 
+        { name: "Maven", icon: <SiApachemaven color="#C71A22" /> }, 
+        { name: "VS Code", icon: <SiVisualstudiocode color="#007ACC" /> }, 
+        { name: "Eclipse", icon: <SiEclipseide color="#2C2255" /> }
+      ]
     }
   ];
 
@@ -26,23 +43,28 @@ const Skills = () => {
         <h2 className="section-title">My <span className="gradient-text">Toolkit</span></h2>
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
           gap: '2rem' 
         }}>
           {skillCategories.map((cat, idx) => (
-            <div key={idx} className="glass-card">
-              <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent-primary)' }}>{cat.title}</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
+            <div key={idx} className="glass-card" style={{ display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent-primary)', fontSize: '1.4rem' }}>{cat.title}</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                 {cat.skills.map((skill, sIdx) => (
-                  <span key={sIdx} style={{
-                    padding: '0.5rem 1.2rem',
+                  <div key={sIdx} className="tech-badge" style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    padding: '0.6rem 1rem',
                     background: 'rgba(255, 255, 255, 0.05)',
                     borderRadius: '50px',
-                    fontSize: '0.9rem',
-                    border: '1px solid var(--glass-border)'
+                    fontSize: '0.95rem',
+                    border: '1px solid var(--glass-border)',
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
                   }}>
-                    {skill}
-                  </span>
+                    {skill.icon}
+                    <span style={{ fontWeight: '500' }}>{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
