@@ -1,12 +1,14 @@
 import React from 'react';
-import { SiJava, SiJavascript, SiMysql, SiSpringboot, SiReact, SiHibernate, SiMongodb, SiGithub, SiApachemaven, SiVisualstudiocode, SiEclipseide } from 'react-icons/si';
+import { SiJavascript, SiMysql, SiSpringboot, SiReact, SiHibernate, SiMongodb, SiGithub, SiApachemaven, SiEclipseide } from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
+import { VscVscode } from 'react-icons/vsc';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming",
       skills: [
-        { name: "Java", icon: <SiJava color="#007396" /> }, 
+        { name: "Java", icon: <FaJava color="#007396" /> }, 
         { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> }, 
         { name: "SQL", icon: <SiMysql color="#4479A1" /> }
       ]
@@ -31,7 +33,7 @@ const Skills = () => {
       skills: [
         { name: "Git/GitHub", icon: <SiGithub color="#FFF" /> }, 
         { name: "Maven", icon: <SiApachemaven color="#C71A22" /> }, 
-        { name: "VS Code", icon: <SiVisualstudiocode color="#007ACC" /> }, 
+        { name: "VS Code", icon: <VscVscode color="#007ACC" /> }, 
         { name: "Eclipse", icon: <SiEclipseide color="#2C2255" /> }
       ]
     }
